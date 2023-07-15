@@ -1,2 +1,4 @@
 */terraform*
 */.terraform*
+infra/vpc/.terraform*
+infra/vpc/terraform*
