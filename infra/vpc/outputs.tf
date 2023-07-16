@@ -1,3 +1,52 @@
+output "vpc_id" {
+  description = "The ID of the VPC"
+  value       = module.vpc_with_flow_logs_cloudwatch_logs.vpc_id
+}
+
+output "vpc_arn" {
+  description = "The ARN of the VPC"
+  value       = module.vpc_with_flow_logs_cloudwatch_logs.vpc_arn
+}
+
+output "vpc_cidr_block" {
+  description = "The CIDR block of the VPC"
+  value       = module.vpc_with_flow_logs_cloudwatch_logs.vpc_cidr_block
+}
+
+output "private_subnets" {
+  description = "List of IDs of private subnets"
+  value       = module.vpc_with_flow_logs_cloudwatch_logs.private_subnets
+}
+
+output "private_subnet_arns" {
+  description = "List of ARNs of private subnets"
+  value       = module.vpc_with_flow_logs_cloudwatch_logs.private_subnet_arns
+}
+
+output "private_subnets_cidr_blocks" {
+  description = "List of cidr_blocks of private subnets"
+  value       = module.vpc_with_flow_logs_cloudwatch_logs.private_subnets_cidr_blocks
+}
+
+output "private_subnets_ipv6_cidr_blocks" {
+  description = "List of IPv6 cidr_blocks of private subnets in an IPv6 enabled VPC"
+  value       = module.vpc_with_flow_logs_cloudwatch_logs.private_subnets_ipv6_cidr_blocks
+}
+
+output "public_subnets" {
+  description = "List of IDs of public subnets"
+  value       = module.vpc_with_flow_logs_cloudwatch_logs.public_subnets
+}
+
+output "public_subnet_arns" {
+  description = "List of ARNs of public subnets"
+  value       = module.vpc_with_flow_logs_cloudwatch_logs.public_subnet_arns
+}
+
+output "public_subnets_cidr_blocks" {
+  description = "List of cidr_blocks of public subnets"
+  value       = module.vpc_with_flow_logs_cloudwatch_logs.public_subnets_cidr_blocks
+}
 
 # VPC flow log - Cloudwatch logs (created separately)
 output "vpc_with_flow_logs_cloudwatch_logs_vpc_flow_log_id" {

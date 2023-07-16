@@ -36,7 +36,7 @@ variable "tags" {
   description = "A map of tags to add to all resources"
   type        = map(string)
   default     = {
-    name = "redcarpet-dev"
+    name = "arakoo-dev"
     env  = "dev"
   }
 }

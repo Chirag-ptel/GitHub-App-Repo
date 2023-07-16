@@ -2,6 +2,15 @@ provider "aws" {
   region = var.region
 }
 
+terraform {
+  backend "s3" {
+    bucket = "bucket-for-tf-state-githubapp"
+    key    = "vpc/terraform.tfstate"
+    region = "ap-south-1"
+    dynamodb_table = "dynamodb-for-state-lock-tf-state-bucket"
+  }
+} 
+
 data "aws_availability_zones" "available" {}
 
 locals {
